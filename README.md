@@ -56,11 +56,60 @@ cp -r openclaw-skills/smart-model-switching ~/.openclaw/workspace/skills/
 
 ---
 
+### 🔍 Shodan Recon Scanner
+
+**Path:** `shodan-recon-scanner/`
+
+Shodan-powered reconnaissance and vulnerability scanner. Search for exposed services, CVE vulnerabilities, and perform security recon on IPs/domains.
+
+#### Features
+
+- **Device Discovery**: Find exposed services and devices
+- **CVE Scanning**: Search for vulnerable hosts by CVE
+- **Host Analysis**: Detailed IP/domain reconnaissance
+- **Honeypot Detection**: Identify honeypots before engagement
+- **Data Export**: Download and parse scan results
+
+#### CVE Quick Reference
+
+| CVE | Name | Search Query |
+|-----|------|--------------|
+| CVE-2021-44228 | Log4Shell | `vuln:CVE-2021-44228` |
+| CVE-2019-0708 | BlueKeep | `vuln:CVE-2019-0708 port:3389` |
+| CVE-2017-0144 | EternalBlue | `vuln:CVE-2017-0144 port:445` |
+| CVE-2022-22965 | Spring4Shell | `vuln:CVE-2022-22965` |
+
+#### Quick Commands
+
+```bash
+# Check account info
+shodan info
+
+# Search for Apache servers
+shodan search "apache country:US"
+
+# Get host info
+shodan host 8.8.8.8
+
+# Check honeypot score
+shodan honeyscore 8.8.8.8
+
+# Scan for Log4Shell
+shodan search "vuln:CVE-2021-44228"
+```
+
+#### Triggers
+
+`shodan`, `recon`, `cve-scan`, `vuln-scan`, `exposed-services`, `device-search`, `ip-recon`
+
+---
+
 ## 🔧 Available Skills
 
 | Skill | Description | Status |
 |-------|-------------|--------|
 | `smart-model-switching` | Multi-provider model routing | ✅ Active |
+| `shodan-recon-scanner` | Shodan recon & CVE scanning | ✅ Active |
 | `security-auditor` | OWASP security audits | ✅ Active |
 | `vector-memory` | Qdrant semantic memory | ✅ Active |
 
