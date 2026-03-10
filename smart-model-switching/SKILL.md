@@ -1,6 +1,7 @@
 ---
 name: smart-model-switching
-description: Auto-route tasks to cheapest model. Multi-provider: GLM (Flash→Standard→Plus) + Qwen (Coder→Flash). Routes coding to kiro-cli. Simple queries stay on cheap models. Complex tasks escalate. Triggers: complex, coding, analysis, security, audit, refactor, implement, debug, architecture, design, plan.
+description: "Auto-route tasks to cheapest model. Multi-provider: GLM (Flash→Standard→Plus) + Qwen (Coder→Flash). Routes coding to kiro-cli."
+triggers: complex, coding, analysis, security, audit, refactor, implement, debug, architecture, design, plan
 ---
 
 # Smart Model Switching
